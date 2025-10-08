@@ -24,10 +24,10 @@ public class MazeGenerator : MonoBehaviour
             }
         }
 
-        GenerateMaze(null, mazeGrid[0, 0]);
-
         mazeGrid[0, 0].ClearLeftWall();
         mazeGrid[mazeWidth - 1, mazeDepth - 1].ClearRightWall();
+
+        GenerateMaze(null, mazeGrid[0, 0]);
     }
 
     private void GenerateMaze(MazeCell previousCell, MazeCell currentCell)
